@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 
+import hashlib
 import os
 import csv
 import re
+import sqlite3
 import uuid
 import pandas as pd
 import DataStructure
 from DataCollection import clean_and_extract_text
 from difflib import SequenceMatcher  #比较库
 from tqdm import tqdm  #进度条library
+
+from SQLDataBase import create_connection, create_table 
 
 # 每个文件提取的词
 extracted_words = set()
@@ -20,13 +24,19 @@ def contains_chinese(text):
 def check_if_line_is_invalid(line):
     return line.startswith('//') or line.startswith('；') or line.startswith(';')
 
+def generate_guid(origin_string_data, clean_string_data, source_file):
+    # 使用 origin_string_data, clean_string_data 和 source_file 生成唯一且一致的哈希值
+    unique_string = origin_string_data + clean_string_data + source_file
+    hash_object = hashlib.md5(unique_string.encode())
+    return str(uuid.UUID(hash_object.hexdigest()))
+
 def get_data_structure(ori_text, cur_text, file_name):
     ori_string_data = ori_text
     clean_string_data = clean_and_extract_text(cur_text, extracted_words)
     #打印extracted_words
     if extracted_words:
         print(extracted_words)
-    guid = str(uuid.uuid1())
+    guid = generate_guid(ori_string_data, clean_string_data, file_name)
     return DataStructure.DataStructure(origin_string_data=ori_string_data, guid=guid, clean_string_data=clean_string_data, placeholder=extracted_words, source_file=file_name)
 
 def handle_space_split(ori_line, line, file_name):
@@ -38,7 +48,12 @@ def handle_space_split(ori_line, line, file_name):
         data_structures = []
         for element in chinese_elements:
             data_structure = get_data_structure(ori_line, element, file_name)
-            data_structures.append(data_structure)
+            #如果 clean_string_data 不为空则添加到data_structures
+            if data_structure.clean_string_data:
+                data_structures.append(data_structure)
+        #打印data_structures数量大于1的情况
+        if len(data_structures) > 1:
+            print(f"========输出了多行待翻译的中文数据: {ori_line}")
         return data_structures
     return None
 
@@ -228,6 +243,49 @@ def init_translation_datas_by_numbers(translation_data):
         translation_data_by_numbers[key_length][key] = value
     return translation_data_by_numbers
 
+def create_data_structure(conn, data_structures):
+    sql_check = ''' SELECT 1 FROM data_structures WHERE guid = ? '''
+    sql_insert = ''' INSERT INTO data_structures(origin_string_data, guid, clean_string_data, placeholder, source_file)
+                     VALUES(?,?,?,?,?) '''
+    cur = conn.cursor()
+    
+    # Filter out duplicates
+    filtered_data_structures = []
+    for data in tqdm(data_structures, desc="查询数据库"):
+        cur.execute(sql_check, (data[1],))  # Check if guid exists
+        if not cur.fetchone():
+            filtered_data_structures.append(data)
+    
+    # Batch insert all data structures
+    cur.executemany(sql_insert, filtered_data_structures)
+    conn.commit()
+
+def save_to_sql(all_data):
+    database = r"original_data.db"
+
+    # create a database connection
+    conn = sqlite3.connect(database)
+    with conn:
+        create_table_sql = """ CREATE TABLE IF NOT EXISTS data_structures (
+                                    id integer PRIMARY KEY,
+                                    origin_string_data text NOT NULL,
+                                    guid text NOT NULL,
+                                    clean_string_data text,
+                                    placeholder text,
+                                    source_file text
+                                ); """
+        create_table(conn, create_table_sql)
+
+        data_structures = []
+        for file_name, data_list in tqdm(all_data.items(), desc="Processing files"):
+            for data in data_list:
+                data_structure = (data.origin_string_data, data.guid, data.clean_string_data, ','.join(data.placeholder), data.source_file)
+                data_structures.append(data_structure)
+
+        # Batch insert all data structures
+        create_data_structure(conn, data_structures)
+    conn.close()
+
 # def handle_data(all_data):
     #遍历all_data 以clean_string_data为目标字符串
 
@@ -239,9 +297,11 @@ output_excel_path = r'G:\Project\TranslationOptimization\Files\all_ini_files.xls
 length_threshold = 5
 
 def main():
-    # Process the directory and save to CSV
     all_data = process_directory(directory_path)
     save_to_excel(all_data, output_excel_path)
+    save_to_sql(all_data)
+    
+    return
     translation_data = init_translation_datas(all_data)
     translation_data_by_numbers = init_translation_datas_by_numbers(translation_data)
     str_data = translation_data.keys()
