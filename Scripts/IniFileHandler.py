@@ -2,6 +2,7 @@
 
 import hashlib
 import itertools
+import json
 import os
 import csv
 import re
@@ -206,7 +207,7 @@ def replace_numbers_with_placeholder(text, num_dict):
     
     return re.sub(r'\d+', replacer, text)
 
-def get_different_with_placeholder(str1, str2, ratio=0.8, threshold=5):
+def get_different_with_placeholder(str1, str2, ratio=0.8, ignore_similar=False):
     # 提取字符串1和字符串2中的所有数字
     nums1 = extract_numbers(str1)
     nums2 = extract_numbers(str2)
@@ -223,9 +224,10 @@ def get_different_with_placeholder(str1, str2, ratio=0.8, threshold=5):
     str1_placeholder = replace_numbers_with_placeholder(str1, num_dict1)
     str2_placeholder = replace_numbers_with_placeholder(str2, num_dict1)
     
-    s = SequenceMatcher(None, str1_placeholder, str2_placeholder)
-    if s.ratio() < ratio:
-        return False, str1, [], []
+    if not ignore_similar:
+        s = SequenceMatcher(None, str1_placeholder, str2_placeholder)
+        if s.ratio() < ratio:
+            return False, str1, [], []
 
     parts = []
     ori_parts1 = []
@@ -407,7 +409,7 @@ def hanlde_translationTemplateDatas(all_data):
                                     template_datas[key].placeholders[placeholder] = set()
                                 template_datas[key].placeholders[placeholder].update(placeholders[placeholder])
         # 将template_datas 存储到 txt文件中
-        with open("result_1219.txt", "w", encoding="utf-8") as f:
+        with open("result_1219_old.txt", "w", encoding="utf-8") as f:
             for key in template_datas.keys():
                 if template_datas[key].need_check:
                     f.write(f"是否需要人工检查: {template_datas[key].need_check}\n")
@@ -420,31 +422,106 @@ def hanlde_translationTemplateDatas(all_data):
                 # f.write(f"{key}\n")
             # f.write("\n")                        
 
+import difflib
+from tqdm import tqdm
+
+def find_similar_groups(data, threshold=0.8):
+    similar_groups = []
+    checked_strings = set()  # 存储已比较过的字符串
+
+    # 遍历长度区间
+    for length in tqdm(range(min(data.keys()), max(data.keys()) + 1), desc="相似度查询中"):
+        if length not in data:
+            continue
+        
+        current_group = []  # 当前长度下的字符串组
+        current_group.extend(data[length])
+        
+        # 处理长度插值在5以内的字符串
+        for diff in range(1, 6):
+            if length + diff in data:
+                current_group.extend(data[length + diff])
+            if length - diff in data:
+                current_group.extend(data[length - diff])
+                
+        # 去除重复字符串
+        current_group = list(set(current_group))
+
+        # 对当前组的字符串进行两两比较
+        for i in range(len(current_group)):
+            str1 = current_group[i]
+            if str1 in checked_strings:
+                continue
+            new_group = [str1]
+            for j in range(i + 1, len(current_group)):
+                str2 = current_group[j]
+                if difflib.SequenceMatcher(None, str1, str2).ratio() >= threshold:
+                    new_group.append(str2)
+            if len(new_group) > 1:  # 只保存包含多个字符串的组
+                similar_groups.append(set(new_group))
+            checked_strings.update(new_group)  # 更新已比较的字符串
+
+    return similar_groups
+
+class CustomEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, CleanStrData):
+            return {
+                'clean_str_data': obj.clean_str_data,
+                'guids': list(obj.guids)
+            }
+        if isinstance(obj, TranslationTemplateData):
+            return {
+                'template': obj.template,
+                'clean_str_datas': [self.default(data) for data in obj.clean_str_datas],
+                'placeholders': list(obj.placeholders)
+            }
+        return json.JSONEncoder.default(self, obj)
+
 def hanlde_translationTemplateDatas_new(all_data):
     translation_data = init_translation_datas(all_data)
     translation_data_by_numbers, key_length_list = init_translation_datas_by_keylength(translation_data)
     
     translation_data_pair_list = {}
-    
+
     # 对key_length_list进行排序
     key_length_list.sort()
-    # 遍历key_length_list  
-    for i in range(1, len(key_length_list)):
-        cur_group = translation_data_by_numbers[key_length_list[i]]
-        keys = list(cur_group.keys())
-        # 组内遍历 字符串相互比较is_similar
-        for key1, key2 in itertools.combinations(keys, 2):
-            if is_similar(key1, key2):
-                if key1 not in translation_data_pair_list:
-                    translation_data_pair_list[key1] = []
-                    translation_data_pair_list[key1].append(CleanStrData(key1, cur_group[key1].get("guids", set())))
-                translation_data_pair_list[key1].append(CleanStrData(key2, cur_group[key2].get("guids", set())))
-                # cur_group 待删除key2
-                del cur_group[key2]
-        
-    
-                            
-                            
+
+    # 将 translation_data_by_numbers 转换为 find_similar_groups 所需的格式
+    data = {}
+    for length in key_length_list:
+        data[length] = list(translation_data_by_numbers[length].keys())
+
+    # 找到相似的组
+    similar_groups = find_similar_groups(data)
+
+    # 处理相似的组
+    for group in similar_groups:
+        group = list(group)
+        key1 = group[0]
+        if key1 not in translation_data_pair_list:
+            translation_data_pair_list[key1] = []
+            translation_data_pair_list[key1].append(CleanStrData(key1, translation_data_by_numbers[len(key1)][key1].get("guids", set())))
+        for key2 in group[1:]:
+            translation_data_pair_list[key1].append(CleanStrData(key2, translation_data_by_numbers[len(key2)][key2].get("guids", set())))
+
+    template_datas = {}
+
+    # 处理占位符数据
+    for key in translation_data_pair_list.keys():
+        placeholders = {}
+        # 用get_different_with_placeholder 比较translation_data_pair_list[key]前两个元素
+        is_similar, result, placeholder1, placeholder2 = get_different_with_placeholder(translation_data_pair_list[key][0].clean_str_data, translation_data_pair_list[key][1].clean_str_data)
+        if result not in template_datas:
+            clean_str_datas = translation_data_pair_list[key]
+            
+            template_data = TranslationTemplateData(result, clean_str_datas, placeholders)
+            template_datas[result] = template_data
+
+    # 用Json的格式保存结果
+    with open("result_1219_222.txt", "w", encoding="utf-8") as f:
+        json.dump(template_datas, f, cls=CustomEncoder, ensure_ascii=False, indent=4)
+                      
 
 # def handle_data(all_data):
     #遍历all_data 以clean_string_data为目标字符串
@@ -459,7 +536,8 @@ length_threshold = 5
 def main():
     all_data = process_directory(directory_path)
     save_to_excel(all_data, output_excel_path)
-    # save_to_sql(all_data)
+    save_to_sql(all_data)
+    # hanlde_translationTemplateDatas(all_data)
     hanlde_translationTemplateDatas_new(all_data)
     # get_different_with_placeholder('1111012,3,106,0,300000,1350,0,10,100,"1048185,1","1092174,129,1","增加伤害法宝[*-13,112*]3[*-4,-1*][~SQCZ_BBBSIcon~]",65,3783,0,12,1,"1037231|1037232|1037233|1111010|1111110|1111210|1110010|1110110|1110210||1048400|1111011|1111111|1111211|1092174|1092015",3,"3276', 
     #                                '1111012,3,107,0,360000,1450,0,10,100,"1048185,1","1092174,189,1","增加伤害法宝[*-13,112*]3[*-4,-1*][~SQCZ_BBBSIcon~]",65,3783,0,12,1,"1037231|1037232|1037233|1111010|1111110|1111210|1110010|1110110|1110210||1048400|1111011|1111111|1111211|1092174|1092015",3,"3276')
