@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import hashlib
+import itertools
 import os
 import csv
 import re
@@ -12,7 +13,8 @@ from DataCollection import clean_and_extract_text
 from difflib import SequenceMatcher  #比较库
 from tqdm import tqdm  #进度条library
 
-from SQLDataBase import create_connection, create_table 
+from SQLDataBase import create_connection, create_table
+from TranslationTemplateData import CleanStrData, TranslationTemplateData 
 
 # 每个文件提取的词
 extracted_words = set()
@@ -52,8 +54,8 @@ def handle_space_split(ori_line, line, file_name):
             if data_structure.clean_string_data:
                 data_structures.append(data_structure)
         #打印data_structures数量大于1的情况
-        if len(data_structures) > 1:
-            print(f"========输出了多行待翻译的中文数据: {ori_line}")
+        # if len(data_structures) > 1:
+        #     print(f"========输出了多行待翻译的中文数据: {ori_line}")
         return data_structures
     return None
 
@@ -187,35 +189,82 @@ def save_to_excel(all_data, output_excel_path):
 str_data = {}
 
 #用于存放处理后的数据
-data_map = {}
+template_datas = {}
 
 #结果数据
 result_data = {}
 
-#占位符替换
+def extract_numbers(text):
+    # 提取所有数字
+    return re.findall(r'\d+', text)
+
+def replace_numbers_with_placeholder(text, num_dict):
+    # 将所有数字替换为占位符
+    def replacer(match):
+        num = match.group(0)
+        return num_dict[num]
+    
+    return re.sub(r'\d+', replacer, text)
+
 def get_different_with_placeholder(str1, str2, ratio=0.8, threshold=5):
-    # len_diff = abs(len(str1) - len(str2))
-    # if len_diff > threshold:
-    #     return False, str1
+    # 提取字符串1和字符串2中的所有数字
+    nums1 = extract_numbers(str1)
+    nums2 = extract_numbers(str2)
     
-    s = SequenceMatcher(None, str1, str2)
+    # 创建字典，将字符串1中的数字替换为从01开始的递增数字
+    num_dict1 = {num: f'{i:02}' for i, num in enumerate(nums1, start=1)}
+    # 创建字典，如果num_dict1中不存在，则将字符串2中的数字替换为从99开始的递减数字 添加到num_dict1中
+    num_dict2 = {num: f'{99 - i:02}' for i, num in enumerate(nums2, start=1) if num not in num_dict1}
+    
+    # 整合两个字典
+    num_dict1.update(num_dict2)
+    
+    # 替换数字为占位符
+    str1_placeholder = replace_numbers_with_placeholder(str1, num_dict1)
+    str2_placeholder = replace_numbers_with_placeholder(str2, num_dict1)
+    
+    s = SequenceMatcher(None, str1_placeholder, str2_placeholder)
     if s.ratio() < ratio:
-        return False, str1
-    
+        return False, str1, [], []
+
     parts = []
-    last_j = 0
+    ori_parts1 = []
+    ori_parts2 = []
     holder_index = 0
+
     for tag, i1, i2, j1, j2 in s.get_opcodes():
         if tag == 'equal':
-            parts.append(str2[j1:j2])
+            parts.append(str2_placeholder[j1:j2])
         else:
             placeholder = "{" + str(holder_index) + "}"
             holder_index += 1
             parts.append(placeholder)
-    return True,"".join(parts)
+            ori_parts1.append(str1_placeholder[i1:i2])
+            ori_parts2.append(str2_placeholder[j1:j2])
+    
+    # 将占位符替换回原始数字
+    result = "".join(parts)
+    for num, placeholder in num_dict1.items():
+        result = result.replace(placeholder, num)
+    for num, placeholder in num_dict2.items():
+        result = result.replace(placeholder, num)
+        
+    # 移除ori_parts1 ori_parts2中的纯数字
+    ori_parts1 = [part for part in ori_parts1 if not part.isdigit()]
+    ori_parts2 = [part for part in ori_parts2 if not part.isdigit()]
+    
+    # print(result)
+    # print(ori_parts1)
+    # print(ori_parts2)    
+    
+    return True, result, ori_parts1, ori_parts2
 
 def contains_value(dictionary, value):
     return value in dictionary.values()
+
+# 计算字符串相似度
+def is_similar(a, b, ratiothresh=0.8):
+    return SequenceMatcher(None, a, b).ratio() > ratiothresh
 
 # 初始化translation_data 字典型
 # translation_str 翻译数据 key
@@ -228,20 +277,24 @@ def init_translation_datas(all_data):
                 translation_data[data.clean_string_data] = {
                     "guids": set(),
                     "source_files": set()
+                    # "methods": set()
                 }
             translation_data[data.clean_string_data]["guids"].add(data.guid)
             translation_data[data.clean_string_data]["source_files"].add(data.source_file)
+            # translation_data[data.clean_string_data]["methods"].add("None")
     return translation_data
 
-def init_translation_datas_by_numbers(translation_data):
+def init_translation_datas_by_keylength(translation_data):
     translation_data_by_numbers = {}
+    key_length_list = []
     # 按照 translation_data key 的字数进行分类，将整个数据结构添加到 translation_data_by_numbers 中
     for key, value in translation_data.items():
         key_length = len(key)
         if key_length not in translation_data_by_numbers:
             translation_data_by_numbers[key_length] = {}
+            key_length_list.append(key_length)
         translation_data_by_numbers[key_length][key] = value
-    return translation_data_by_numbers
+    return translation_data_by_numbers, key_length_list
 
 def create_data_structure(conn, data_structures):
     sql_check = ''' SELECT 1 FROM data_structures WHERE guid = ? '''
@@ -285,6 +338,113 @@ def save_to_sql(all_data):
         # Batch insert all data structures
         create_data_structure(conn, data_structures)
     conn.close()
+    
+def hanlde_translationTemplateDatas(all_data):
+    translation_data = init_translation_datas(all_data)
+    translation_data_by_numbers = init_translation_datas_by_keylength(translation_data)
+    data_pairs = translation_data.items()
+    
+    # 处理数据
+    for data_pair_key, data_pair_value in tqdm(data_pairs, desc="处理文本数据"):
+        length = len(data_pair_key)
+        is_similar = False
+        # 遍历 translation_data_by_numbers 长度为 length +- length_threshold 的数据
+        for i in range(length - length_threshold, length + length_threshold + 1):
+            if i in translation_data_by_numbers:
+                for key in translation_data_by_numbers[i].keys():
+                    # 完全相同则跳过
+                    if key == data_pair_key:
+                        continue
+                                        
+                    is_similar, result, placeholder1, placeholder2 = get_different_with_placeholder(data_pair_key, key)
+                    if is_similar:
+                        # 如果 template_datas 没有 key 则添加 key
+                        if key not in template_datas:
+                            clean_str_datas = []
+                            # clean_str_datas 清洗后的字符串数据的集合
+                            #     每个集合元素
+                            #     clean_str_data 清洗后的字符串数据
+                            #     guids 对应的唯一标识
+                            # 添加clean_str_data  guid 
+                            clean_str_data1 = data_pair_key
+                            guids1 = data_pair_value["guids"]
+                            clean_str_datas.append(CleanStrData(clean_str_data1, guids1))
+                            
+                            clean_str_data2 = key
+                            guids2 = translation_data_by_numbers[i][key].get("guids", set())
+                            # 添加clean_str_data1 guids1作为key value数据 添加到clean_str_datas中
+                            clean_str_datas.append(CleanStrData(clean_str_data2, guids2))
+                            
+                            
+                            placeholders = {}
+                            # placeholders 占位符集合
+                            #     每个集合元素
+                            #     placeholder 占位符
+                            #     guids 对应的唯一标识
+                            # 添加placeholder  guid
+                            # 将placeholder1 placeholder2中的内容和guids 添加到placeholders中，如果不存在placeholder key
+                            for placeholder in placeholder1:
+                                if placeholder not in placeholders:
+                                    placeholders[placeholder] = set()
+                                placeholders[placeholder].update(guids1)
+                            for placeholder in placeholder2:
+                                if placeholder not in placeholders:
+                                    placeholders[placeholder] = set()
+                                placeholders[placeholder].update(guids2)
+                            
+                            template_data = TranslationTemplateData(result, clean_str_datas, placeholders)
+                            template_datas[key] = template_data
+                        else:
+                            # 如果返回的模板为空，则直接添加到 datas 中
+                            if template_datas[key].template == "":
+                                template_datas[key].template = result
+                            elif template_datas[key].template != result:
+                                template_datas[key].need_check = True
+                            
+                            template_datas[key].clean_str_datas.extend(clean_str_datas)
+                            for placeholder in placeholders:
+                                if placeholder not in template_datas[key].placeholders:
+                                    template_datas[key].placeholders[placeholder] = set()
+                                template_datas[key].placeholders[placeholder].update(placeholders[placeholder])
+        # 将template_datas 存储到 txt文件中
+        with open("result_1219.txt", "w", encoding="utf-8") as f:
+            for key in template_datas.keys():
+                if template_datas[key].need_check:
+                    f.write(f"是否需要人工检查: {template_datas[key].need_check}\n")
+                if template_datas[key].template:
+                    f.write(f"模板: {template_datas[key].template}\n")
+                    f.write(f"数据: {template_datas[key].clean_str_datas}\n")
+                    f.write(f"占位符: {template_datas[key].placeholders}\n")
+            # else:
+                #不打印没有模板的数据
+                # f.write(f"{key}\n")
+            # f.write("\n")                        
+
+def hanlde_translationTemplateDatas_new(all_data):
+    translation_data = init_translation_datas(all_data)
+    translation_data_by_numbers, key_length_list = init_translation_datas_by_keylength(translation_data)
+    
+    translation_data_pair_list = {}
+    
+    # 对key_length_list进行排序
+    key_length_list.sort()
+    # 遍历key_length_list  
+    for i in range(1, len(key_length_list)):
+        cur_group = translation_data_by_numbers[key_length_list[i]]
+        keys = list(cur_group.keys())
+        # 组内遍历 字符串相互比较is_similar
+        for key1, key2 in itertools.combinations(keys, 2):
+            if is_similar(key1, key2):
+                if key1 not in translation_data_pair_list:
+                    translation_data_pair_list[key1] = []
+                    translation_data_pair_list[key1].append(CleanStrData(key1, cur_group[key1].get("guids", set())))
+                translation_data_pair_list[key1].append(CleanStrData(key2, cur_group[key2].get("guids", set())))
+                # cur_group 待删除key2
+                del cur_group[key2]
+        
+    
+                            
+                            
 
 # def handle_data(all_data):
     #遍历all_data 以clean_string_data为目标字符串
@@ -299,8 +459,10 @@ length_threshold = 5
 def main():
     all_data = process_directory(directory_path)
     save_to_excel(all_data, output_excel_path)
-    save_to_sql(all_data)
-    
+    # save_to_sql(all_data)
+    hanlde_translationTemplateDatas_new(all_data)
+    # get_different_with_placeholder('1111012,3,106,0,300000,1350,0,10,100,"1048185,1","1092174,129,1","增加伤害法宝[*-13,112*]3[*-4,-1*][~SQCZ_BBBSIcon~]",65,3783,0,12,1,"1037231|1037232|1037233|1111010|1111110|1111210|1110010|1110110|1110210||1048400|1111011|1111111|1111211|1092174|1092015",3,"3276', 
+    #                                '1111012,3,107,0,360000,1450,0,10,100,"1048185,1","1092174,189,1","增加伤害法宝[*-13,112*]3[*-4,-1*][~SQCZ_BBBSIcon~]",65,3783,0,12,1,"1037231|1037232|1037233|1111010|1111110|1111210|1110010|1110110|1110210||1048400|1111011|1111111|1111211|1092174|1092015",3,"3276')
     return
     translation_data = init_translation_datas(all_data)
     translation_data_by_numbers = init_translation_datas_by_numbers(translation_data)

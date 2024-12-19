@@ -32,6 +32,13 @@ def clean_and_extract_text(text, extracted_words):
     text = re.sub(r'\[\/\$\$\$.*?\]', '', text)  # 删除类似 [/$$$xFFFFFF] 的标签
     text = re.sub(r'\[=\$\$\$=\]', '', text)  # 删除 [=$$$=] 符号
     text = re.sub(r'\n+', ' ', text)  # 删除所有换行符并替换为一个空格
+    
+    # 删除开头和结尾的中英文标点符号
+    text = re.sub(r'^[^\u4e00-\u9fff\w]+|[^\u4e00-\u9fff\w]+$', '', text)
+    
+    # 删除结尾的 "#数字" 格式的字符串
+    text = re.sub(r'#\d+$', '', text)
+
     return text.strip()  # 删除开头和结尾的空格
 
 def process_xlsx_files(directory):
