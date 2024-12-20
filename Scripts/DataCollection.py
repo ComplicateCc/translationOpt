@@ -52,7 +52,7 @@ def clean_and_extract_text(text, extracted_words):
     text = re.sub(r'^\[\*\d+,-?\d+\*\](?:\[\*\d+,-?\d+\*\])*', '', text)
     
     # 删除开头和结尾的中英文标点符号
-    text = re.sub(r'^[^\w\s]+|[^\w\s]+$', '', text)
+    # text = re.sub(r'^[^\w\s]+|[^\w\s]+$', '', text)
     
     return text.strip()  # 删除开头和结尾的空格
 
