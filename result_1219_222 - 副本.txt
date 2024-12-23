@@ -1,0 +1,909 @@
+{
+    "羽郎……{0}": {
+        "template": "羽郎……{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "羽郎……",
+                "guids": [
+                    "2b6dba6e-d0a8-27f5-00b4-df4c5be3cc09",
+                    "4673fc45-85f3-3f78-457f-c194bd9063e3"
+                ]
+            },
+            {
+                "clean_str_data": "羽郎……我",
+                "guids": [
+                    "64ed759a-e2dc-d367-8040-5a6814264bea"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "吞噬{0}": {
+        "template": "吞噬{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "吞噬他",
+                "guids": [
+                    "08a1f1c4-29f7-90ae-a2cb-8885766836ec",
+                    "72702094-02bd-32f3-1ea1-636e416a905b"
+                ]
+            },
+            {
+                "clean_str_data": "吞噬",
+                "guids": [
+                    "a55aa809-7227-4b07-be0d-2292c1acb94e",
+                    "0e0b9f1c-14bb-a2c4-1dd6-3fa31e196443"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "雾林村{0}民{1}": {
+        "template": "雾林村{0}民{1}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "雾林村村民",
+                "guids": [
+                    "62eb26e2-0aa2-420a-27ec-ac750b6c1da0",
+                    "bc408c37-a02d-c5ce-845f-5fa4916e02f3",
+                    "0b22a35b-8202-81e5-df33-aed637c17d1c",
+                    "f9581edb-0cb0-db8d-5dd6-d30c711cb4e2"
+                ]
+            },
+            {
+                "clean_str_data": "雾林村民兵",
+                "guids": [
+                    "28e0e968-45ab-8b42-3afd-5cdfdf7daf29",
+                    "4762afa2-42fd-0979-dfd1-0ab2793ed1aa",
+                    "6ca0c72e-089b-450f-d24a-c670b3ace1ef",
+                    "f12425b7-5439-6a9c-b4b9-6e4500cc7ccf",
+                    "b5fcda5a-c1bf-aa60-44bd-7bbf7cd6b642",
+                    "4d6cf79b-f7e7-722a-8f23-8eb0589ddc97",
+                    "9593dae1-f96e-91a0-c4c4-9d1f66884b31",
+                    "363e3749-cec5-2da4-4395-c5ca3d46fed7",
+                    "9197fa09-c9b3-76bc-1834-0ca14f52e36b",
+                    "7e5bafa0-4db0-d28f-9d60-b0a11a8f2155",
+                    "04ed0cc9-5a24-5a18-5788-ce0ab32d8baf",
+                    "980f460c-3cff-5d23-ba9d-c27da9f36da5",
+                    "907fbf27-1c64-6e94-1d15-9b68942e75e8",
+                    "c6c5fe86-bc76-9bee-6e65-42970e549f35",
+                    "c62e1ee5-21f2-2508-f42f-0a5a00fd255c",
+                    "2157248c-9432-51e1-bedb-927e2733fc8c",
+                    "20d91b3c-578d-4bd9-86a0-f028df6b921a"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "复苏的亡{0}": {
+        "template": "复苏的亡{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "复苏的亡者",
+                "guids": [
+                    "3ee47ea7-3663-2350-296e-1398e0819675",
+                    "3b191728-8ae6-c753-d686-d441b3f04696"
+                ]
+            },
+            {
+                "clean_str_data": "复苏的亡魂",
+                "guids": [
+                    "223fc658-e2b0-f597-1561-0a57c31f9d7a",
+                    "a41db6f1-acce-863c-ab8d-8d05039d552b"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}怎么了": {
+        "template": "{0}怎么了",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "我怎么了",
+                "guids": [
+                    "40439f2f-78da-bac0-ce63-34124b047c70"
+                ]
+            },
+            {
+                "clean_str_data": "怎么了",
+                "guids": [
+                    "a50bfef7-7f63-1d3d-de50-1bcdbaa4a148"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "赫丽女王{0}": {
+        "template": "赫丽女王{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "赫丽女王",
+                "guids": [
+                    "1ca67e68-3146-00bd-8bde-d27ae1fb38b4"
+                ]
+            },
+            {
+                "clean_str_data": "赫丽女王您说",
+                "guids": [
+                    "d700b119-6be2-308d-bce5-51b50ebc42fb"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}王女·伊芙利特": {
+        "template": "{0}王女·伊芙利特",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "白王女·伊芙利特",
+                "guids": [
+                    "b68f2f4e-38c9-3388-f340-ea942c261140"
+                ]
+            },
+            {
+                "clean_str_data": "王女·伊芙利特",
+                "guids": [
+                    "1029aadf-2dfd-0a33-177e-553e42fda60d"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}|75|215|1": {
+        "template": "{0}|75|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "王后|75|215|1",
+                "guids": [
+                    "fcef0cf5-ec52-30cf-2e40-4331d4e1b95a",
+                    "08652dd7-2861-1970-44d8-7078f4953ae5",
+                    "ccf2124f-0fa4-9339-0f19-ac7ab35b986d",
+                    "d8353df7-a33f-1e13-ebf2-823a2bdedc2a"
+                ]
+            },
+            {
+                "clean_str_data": "应龙|75|215|1",
+                "guids": [
+                    "6b5d5732-4a51-ef32-1ee1-720407a42813",
+                    "fa4faf43-91ab-91d9-a79a-cc267a850bb9",
+                    "f830cea7-ec24-0f14-8c33-58567a684254",
+                    "0b78d3f5-8b32-974c-d681-514635889f4a",
+                    "80003173-1d92-b3ec-c439-9b415c1a7807",
+                    "375e9569-d8d7-a08c-75ed-78fe9fcfb1cd",
+                    "b21e8faf-c5fa-2366-dc14-277bf00d8543",
+                    "af0af41b-70e8-10fa-3630-f0047a72d6f7",
+                    "735c96e1-776f-2296-becf-c6f00b14259e",
+                    "f0160099-d556-c0c0-b3c6-d944ef2d5a97",
+                    "6c96ebec-0a17-b25f-32c4-756a520850f8",
+                    "0ce6da0b-9ee7-2a67-7035-aa3b828bda5e",
+                    "9cbff315-58e4-bb08-79dd-88be12f492d7",
+                    "b57f8e52-5deb-0d7a-bf29-90b609b4992f",
+                    "cb2b9142-5e99-0767-67ed-56bfccca32c6",
+                    "3efa5f87-1fe1-b42f-8d52-06301b3343db",
+                    "23adfd15-b7bf-ee37-19b0-e9e343ce9647",
+                    "aca98baf-51dd-08c6-dc34-704326bf0d63",
+                    "bee593d6-68dd-2e14-4991-6adf1d3fd3be",
+                    "7c3b11fd-2fed-1022-c207-157d8cc313c8",
+                    "e467a37c-5ef2-7ac6-89d9-e1a569b297d2",
+                    "7c459274-afa9-b0b5-ddf8-01890921a471",
+                    "4e624997-6a6c-ebf0-e94c-91c8e7478958",
+                    "daba1c65-df20-bb53-e963-355d27a29514",
+                    "3a56826a-3b37-4b64-4ae8-6ee9948dc4a6",
+                    "d8867810-e309-93a6-470a-0a35bfa596c4",
+                    "5ab1b2b0-cfdb-8817-03c3-a962aa768e67",
+                    "853e2722-f187-8fcd-9d5f-4adc69589c98",
+                    "860befa1-29dc-41c5-46de-f464cb93cbad",
+                    "357e4db6-6a75-15c3-f31f-1ba68037493c",
+                    "ad943797-1fcd-b36e-021e-e8c93090bdc3",
+                    "814dabd6-9f40-29fe-547c-f059830223d1",
+                    "8727c3c5-6413-7b90-d808-d74bf2382f63",
+                    "e2406d14-b27f-dbea-c834-204ac579c4d9",
+                    "7330fea9-7e0e-7845-c349-288258297462",
+                    "03586ce7-dfdd-9a03-5bff-1f0af5dff527",
+                    "22b4a5f8-f12e-04b3-d664-a24f40f8d479",
+                    "0e4b2b87-323d-b048-780f-76ede1c4fa73",
+                    "5c2c0f71-8bde-d602-7578-d1bf6e304ac8",
+                    "84760434-322a-001f-b15c-dc39065b36c6",
+                    "250d0753-ac8a-4b01-f260-60e6e05c462a",
+                    "943a39ff-fc39-ca65-b436-35c6e7f80f17",
+                    "cea8bb5c-811d-d6e6-f210-8b41d5a324bd",
+                    "0a611bef-74a9-7bb4-5584-fc19925a1c71",
+                    "f6baac19-dabf-68f6-2cd2-2355b996ff65",
+                    "4fdfd118-60b1-b24c-ec74-c568a1277f96",
+                    "2456cbd7-5dde-f942-3fb2-ab1bd9e493f2",
+                    "51b8294f-0058-f46b-e703-1c7b6471128b",
+                    "01ffe0d0-e134-b9ad-7302-7658b3ced4a7",
+                    "4908d5cf-e8df-d01a-2eb0-aaa5c57958e5",
+                    "efc0aaae-cf52-4949-aa9f-b9fe5ebbfb6d",
+                    "95f164da-dfba-4bd3-59f9-dad9fe531338",
+                    "ea437804-d865-a36e-a5a0-ff083b2214c7",
+                    "6c8773e7-058d-17a5-b994-ab0c044ca6d6",
+                    "a857c33a-1fb0-de16-9b1f-617727ff004b",
+                    "2e9a1eef-8d6b-c2e9-9a9e-d63c21ea83d8",
+                    "7d963179-ba58-edfb-b546-61e14a1d8899",
+                    "3e0c273c-4ae0-cb27-d433-23c11edfbd0b",
+                    "a1496f08-79f2-8033-f78a-50b00ed30f3b",
+                    "32558c88-19a8-b290-db66-0ba44bc62502",
+                    "604210d0-c77c-6d81-fb67-de200a475972",
+                    "77217c20-bdb9-8b86-664f-bef752345b41",
+                    "a4235227-ef52-04ea-9182-ffd0be6879ae",
+                    "44e83e14-413f-98ac-f017-a7e7918089d8",
+                    "63d666fe-f60b-4be4-7cf6-158b1a18cac1",
+                    "7501d419-866f-c4e2-e2eb-60a3aa1afbbb",
+                    "ba44b58e-a852-c877-16f6-cff685ab073d",
+                    "eca68550-0617-4950-2bcc-62c8cd5c4ef1",
+                    "98158dda-f8c2-7f8d-a69a-9a39d3cb2d42",
+                    "6fab9c4b-d465-c3b5-9fa3-367070dc29d8",
+                    "43072854-8c01-0006-1d04-d619ea73cdf3",
+                    "39d9dd1a-fd48-7ec3-3c90-7277b36e0605",
+                    "fa66179a-0cb1-d3ac-f07d-f494fb0ce594",
+                    "388bb78f-6ea7-df0b-fcbb-fc8de7ef8e24",
+                    "0ae5fceb-8ed4-069d-32d7-ae4f04ded1ff"
+                ]
+            },
+            {
+                "clean_str_data": "狻猊|75|215|1",
+                "guids": [
+                    "9447fdb0-9e07-36c5-7f27-23122c38d041",
+                    "b7af6550-3ce2-10fb-153e-4a1a6cfbf6b2",
+                    "b10f152c-9ae0-d218-10bd-ba9f1fb46c16",
+                    "e8d0244b-003c-047b-599e-a8d4cf0ece1e",
+                    "26e54267-dbb4-f963-c055-91904adb06fa",
+                    "f348a9ae-0fe1-ecbb-08a2-cef89f6083d4",
+                    "fd8a8dc0-1274-b5c8-cd8d-f98dd7e5003c",
+                    "df2e4bb4-165d-fa42-63e2-ce4db8c594bf",
+                    "4555e927-8864-ced8-40ba-7a1fa390ae8e",
+                    "3eda4abc-256f-936f-de72-23299a7a9acc",
+                    "9e2620bc-2c63-6b18-680f-006ee8ca1bfc",
+                    "dc334532-5201-2a20-ee2e-3e54659bf6c5",
+                    "014e3d8c-0c74-c0cc-e2ba-2da3f4188c54",
+                    "0029a33d-c9d0-b799-2923-4c3d340dd5ce",
+                    "616d25d7-10c1-92d2-3b53-5da5edcf1669",
+                    "b3655269-956a-d592-f13e-e12f5ebbd764",
+                    "53cec2df-c8f4-0832-cea3-6919ed1400f1",
+                    "b9eafd0b-040b-93e7-ad16-c1f3e7151a2a",
+                    "19a0cc45-2f00-4805-232b-051c24a3dc91",
+                    "1bec89cd-8203-fc73-e911-76676540d37e",
+                    "32482397-5006-03fc-c3b9-d6aa9e2531c9",
+                    "382085c4-96fb-5e4f-5fa5-2c2384d137fd",
+                    "f4ba9980-e279-90eb-9744-8378c67a6769",
+                    "e74d7936-15c3-e696-88eb-061e9501e5dc",
+                    "ea85c823-fd4f-5c28-bc26-25a7352dadec",
+                    "3af1dc1b-0719-33bf-643d-d47a46df5e41",
+                    "df3a208c-2446-53d7-4819-802726e81df7",
+                    "0272dfd8-d972-3f9f-39f5-cd56ffea420d",
+                    "7707ae13-7cf2-a4e0-9a80-4b9a0d6c90bf",
+                    "b487d144-c4a9-b2c5-9b81-184ee9cce33c",
+                    "37f31011-9ef3-390e-7c25-783ecd6fa985",
+                    "9d07306f-57c5-6b0c-492d-106ece4d5c80",
+                    "b2c107ce-7303-8653-d40f-b99b87149019",
+                    "9cb4c18f-2de0-20b6-d401-3ba20f9396c9",
+                    "a92d9532-ed86-e3fd-1f0a-a35eb928cc19",
+                    "ea0aac4e-f8ec-303c-0b99-49fc78a401f0",
+                    "d446d5ca-49fe-1a34-8d9f-8a6c5e7dda76",
+                    "5c4da809-813b-5f33-f672-4a99dcf57337",
+                    "68115405-852b-6a83-e7bc-e3992f02dce8",
+                    "f96ba404-18ff-13e1-dc7d-bb0273ec1de1",
+                    "d58220d0-a87a-8bb9-6973-88e98233f78d",
+                    "f57b3ab2-49df-5d2a-bc89-84c6c6cf2361",
+                    "2d331abd-5f3c-4b7e-0cde-6e799e558fe1",
+                    "60fbb0db-a0d4-6ded-8037-3827156fb7e6",
+                    "ba1760ec-8301-b7c4-d6c2-f0edbc098244",
+                    "f5d9d8ba-a2e6-a93f-1381-5165f87904e4",
+                    "0483994c-c6fb-d7a3-afa6-9e9426548213",
+                    "6af40e0c-e9ab-f6dc-9ccc-415cfa2034ae",
+                    "2cf36506-6384-c224-0042-99a85429f61d",
+                    "735bfc4b-c41b-4746-0b45-689d52bf9411",
+                    "65983c7a-3f84-b3a7-5037-a4be97307e33"
+                ]
+            },
+            {
+                "clean_str_data": "碎心之王|75|215|1",
+                "guids": [
+                    "32ce00c7-aa98-1f70-08d3-4543606114b6",
+                    "ad6ca913-81d3-5a31-dec3-731767a07642"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "深渊魔{0}|75|215|1": {
+        "template": "深渊魔{0}|75|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "深渊魔主|75|215|1",
+                "guids": [
+                    "44d72115-c72e-41f4-b845-a91fc931bc72",
+                    "5004a215-8924-c4e5-660a-0cd5a548c0de"
+                ]
+            },
+            {
+                "clean_str_data": "深渊魔虫|75|215|1",
+                "guids": [
+                    "069b296e-fd84-27b4-3943-8b28d9bb6b27"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}神使{1}|70|215|1": {
+        "template": "{0}神使{1}|70|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "异界神使|70|215|1",
+                "guids": [
+                    "3c4afb78-cafc-09ad-1849-a89353e37586",
+                    "a36eb251-ac18-23d7-dfda-f7332fe3d062",
+                    "11e1ff4a-dc6d-8794-0c92-fa5ab5dac717",
+                    "a29821b1-f597-d9b3-6e99-4151084aeac0",
+                    "dd8c703f-b92a-35ef-4d0a-3ba72d672cdb"
+                ]
+            },
+            {
+                "clean_str_data": "神使的残魂|70|215|1",
+                "guids": [
+                    "6c0669c7-6465-74f5-b9e1-79a135f9d66d",
+                    "16202571-d458-9c27-b54b-c8b7135767d1",
+                    "cbab51b5-7ff8-1148-05df-0c3960faae3c",
+                    "02b708d4-8203-97a7-cf87-a724d7532c92"
+                ]
+            },
+            {
+                "clean_str_data": "狂暴的残魂|70|215|1",
+                "guids": [
+                    "d0a4fef6-e94e-e71a-33f4-c43be0a35fc1"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "难民·{0}|70|215|1": {
+        "template": "难民·{0}|70|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "难民·杰斯|70|215|1",
+                "guids": [
+                    "4ae1f3cc-a74c-0c60-045a-b3431b070723",
+                    "bf4e74ed-41c0-9f26-ca19-dd53bb96a7da",
+                    "f774e820-f87c-9993-f8c7-c9ef15aae7ff",
+                    "d053a0f7-da7b-89e3-5000-031f1b7583e8",
+                    "e590a318-b9b1-6894-7bb8-4c0511c0084c",
+                    "11587ee5-2e00-3f78-3621-d806d8f2ae53",
+                    "3094d49d-c70d-755c-7a67-a2b2e45bfbcf"
+                ]
+            },
+            {
+                "clean_str_data": "难民·汉娜|70|215|1",
+                "guids": [
+                    "406bd78b-c6f8-90c1-51b9-2d84e75c743c",
+                    "aaf3a3ca-63f0-dc74-cc7f-ba04e7d8e1af",
+                    "bf59c0ad-9e9e-0249-3e66-2c3b51a47ca0"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}王{1}|75|215|1": {
+        "template": "{0}王{1}|75|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "国王·尼禄|75|215|1",
+                "guids": [
+                    "b51420e3-12b2-f4c1-8daf-27196ebf8965",
+                    "3ac95658-19e9-5104-c7c6-29158c06801b",
+                    "a43e43b0-5466-5fdd-203d-bfd2d304f231",
+                    "3d14fdf8-2427-3db4-f65b-23c44776225a",
+                    "65fbf3aa-8ffb-33aa-50aa-843adda1888c",
+                    "00cb238f-c06e-c01c-bddf-9fcdd36d5bdd",
+                    "4d46944a-1ec5-00e1-9b52-99d7e115143a",
+                    "1e0887d2-72b6-a225-4d4e-832588392b1b"
+                ]
+            },
+            {
+                "clean_str_data": "王后|75|215|1",
+                "guids": [
+                    "fcef0cf5-ec52-30cf-2e40-4331d4e1b95a",
+                    "08652dd7-2861-1970-44d8-7078f4953ae5",
+                    "ccf2124f-0fa4-9339-0f19-ac7ab35b986d",
+                    "d8353df7-a33f-1e13-ebf2-823a2bdedc2a"
+                ]
+            },
+            {
+                "clean_str_data": "邪神君王·尼禄|75|215|1",
+                "guids": [
+                    "f55cb331-fbc8-d71f-f20b-99d8b0ddd24c",
+                    "c7833ff4-3735-dfe8-5a51-fc53c93ebbe3",
+                    "6a6486a5-7762-8d44-029c-0485aa211f09",
+                    "8554c20e-98de-4e25-b0b1-e230531503fe",
+                    "9dfb6250-c0c5-c7cd-2011-aecc9ebd8deb",
+                    "7e24e0eb-1d98-5c7a-a860-56eab8d56e74"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "神秘{0}|100|215|1": {
+        "template": "神秘{0}|100|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "神秘青衣人|100|215|1",
+                "guids": [
+                    "3ab29f1c-95de-a3a5-e4ab-a35b0a219a41",
+                    "bf42ec96-bab8-6456-577d-86fc9cd9f265"
+                ]
+            },
+            {
+                "clean_str_data": "神秘剑客|100|215|1",
+                "guids": [
+                    "eb4bd478-fd9b-3d7c-6d04-dc0021b12f58"
+                ]
+            },
+            {
+                "clean_str_data": "仙人|100|215|1",
+                "guids": [
+                    "fd5d1d62-fef8-7589-48bc-94e6229e5220",
+                    "297852f0-71e4-b97c-3e29-57f71d7ad20a"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "守护灵{0}|100|215|1": {
+        "template": "守护灵{0}|100|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "守护灵天马|100|215|1",
+                "guids": [
+                    "d990cf5f-d7c4-05d3-163f-f4c2ce78a117"
+                ]
+            },
+            {
+                "clean_str_data": "守护灵斗牛|100|215|1",
+                "guids": [
+                    "5ff6bade-cdde-fb11-6d16-7025ef3ba32d"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}剑客{1}|100|215|1": {
+        "template": "{0}剑客{1}|100|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "剑客·无名|100|215|1",
+                "guids": [
+                    "b8c166a0-5d52-8f3b-cfda-8e544ca347b7",
+                    "d2548410-a2b8-95bf-b4aa-fe1bf802a444",
+                    "69afd2de-91ff-ac9a-90dc-143e9c7946c2",
+                    "0e590b16-7030-a16e-4c8a-d4be6a81183b"
+                ]
+            },
+            {
+                "clean_str_data": "神秘剑客|100|215|1",
+                "guids": [
+                    "eb4bd478-fd9b-3d7c-6d04-dc0021b12f58"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}神使{1}残魂|70|215|1": {
+        "template": "{0}神使{1}残魂|70|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "神使的残魂|70|215|1",
+                "guids": [
+                    "6c0669c7-6465-74f5-b9e1-79a135f9d66d",
+                    "16202571-d458-9c27-b54b-c8b7135767d1",
+                    "cbab51b5-7ff8-1148-05df-0c3960faae3c",
+                    "02b708d4-8203-97a7-cf87-a724d7532c92"
+                ]
+            },
+            {
+                "clean_str_data": "狂暴的神使残魂|70|215|1",
+                "guids": [
+                    "558df655-e45d-098e-fe64-0ba8912818cf"
+                ]
+            },
+            {
+                "clean_str_data": "狂暴的残魂|70|215|1",
+                "guids": [
+                    "d0a4fef6-e94e-e71a-33f4-c43be0a35fc1"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "我竟然亲眼见证了一位{0}主神的诞生": {
+        "template": "我竟然亲眼见证了一位{0}主神的诞生",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "我竟然亲眼见证了一位巅峰主神的诞生",
+                "guids": [
+                    "ecd4dc28-8d04-b62b-6d75-ac5ea00e72fa",
+                    "baa9c6b3-f6e1-78b6-2a34-0c14fb269065",
+                    "15b2b46f-1b6a-fd83-8961-06ad8cef49e9"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位圆满主神的诞生",
+                "guids": [
+                    "9626ad41-97e5-78a0-bd86-b3f02d2324f9",
+                    "3408cf58-7709-31c9-4384-a0c7d5a5c849",
+                    "a84ead14-13b6-844d-39af-014ea8ce8e8c"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位极限主神的诞生",
+                "guids": [
+                    "7ad74e91-8315-26b6-b197-3ff730f72632",
+                    "db475380-3d1b-958d-608d-d6ce491b165d",
+                    "80b9d07b-82db-f6ba-614d-a54545cacbe5"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位至尊主神的诞生",
+                "guids": [
+                    "47bcc0f9-5548-75c4-be77-2fe72d79a53e",
+                    "e88bd4c2-8f76-2647-66fd-54035df03bd0",
+                    "88848790-e2e5-3491-2fa1-0e5f3cfc3067"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位高阶主神的诞生",
+                "guids": [
+                    "93977e38-6f02-5698-122b-768da0e8ffe3",
+                    "83fd7d4c-496c-48f8-62ba-d89eda05ddc8",
+                    "ddda1c35-57a2-ff53-db4e-86e0174e421d"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位永恒主神的诞生",
+                "guids": [
+                    "dd0313c3-c7d3-9541-d7df-c0591d0d321e",
+                    "2573197f-7a8b-c593-95fa-6b2fd936ae80",
+                    "19a403fb-e5bb-682f-7c75-5505c4888f95"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位超凡主神的诞生",
+                "guids": [
+                    "cf3adc99-1841-6405-149f-69719776cd3c",
+                    "0c8ce983-1405-0f99-61f5-af71019b4b71",
+                    "e278fac7-b110-78a4-4886-d30a9e6f9604"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位不朽主神的诞生",
+                "guids": [
+                    "9a5ec9a3-fca6-5b87-5ba7-4312a08fd2bc",
+                    "1ffb5d7d-a37d-d655-b6d2-1a72ce0c0fa0",
+                    "5b49e346-f5ab-b644-43af-9ea6a6c6a4c3"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "灾厄之蚀·索托斯|{0}|215|1": {
+        "template": "灾厄之蚀·索托斯|{0}|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "灾厄之蚀·索托斯|75|215|1",
+                "guids": [
+                    "a2a5d692-c663-f410-0f83-5e3de9f5451f",
+                    "02edd7fe-1730-3885-0544-15f7c02fadf4"
+                ]
+            },
+            {
+                "clean_str_data": "灾厄之蚀·索托斯|70|215|1",
+                "guids": [
+                    "a5db2f5f-377e-a9c5-3346-efa56ed3fbf9",
+                    "1f1d48f2-5b9d-1616-1ce2-52ad4e9fbb4d"
+                ]
+            },
+            {
+                "clean_str_data": "灾厄之蚀·索托|75|215|1",
+                "guids": [
+                    "124f054e-2814-2f6f-7ef9-9ecab7ca1870",
+                    "030d1ded-0906-65ce-dac9-ee596b633cfc"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}提图斯|70|215|1": {
+        "template": "{0}提图斯|70|215|1",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "雾林村村长·提图斯|70|215|1",
+                "guids": [
+                    "df50a7d4-7a29-9282-7b4f-e4c772f3bdff",
+                    "755103ab-499e-1a19-4825-aa52e36731e8",
+                    "697f7f8e-4ab6-52e4-ce34-6ed680553b7c",
+                    "c146c264-6719-b5fe-9593-02a979eddf25",
+                    "9140630d-cd1f-2343-e486-f15310bf0c5a",
+                    "73c62312-294c-55fd-cd19-24aa9b5b44ea",
+                    "e40fc566-df5e-be9c-ebaf-75b35699e2c1",
+                    "11052ceb-647a-9b77-2c19-420d73d2b8db",
+                    "39df078a-2069-6eb2-aea4-a04817aea43d",
+                    "eca234d2-7262-b13b-259e-129d2b3efdd9",
+                    "2a708519-024e-7e5b-2123-ecb36752b566",
+                    "5eae2e74-d7ee-cdd4-4697-df41dfadd672",
+                    "4a2fce21-b8d8-7129-e5c7-d2ddeccf9912",
+                    "1504c2f9-c2dd-603d-bcf0-b8c41614275c",
+                    "4759f1bd-b7b6-748d-b4cb-a2c61e55c63b",
+                    "ae2e5a6f-b9c9-8148-2e6e-9f27dd42f936",
+                    "648554d0-df5b-1c2d-11ff-35cf444fd3c6",
+                    "7eab9e3f-1215-e5f2-d6c7-8ee57df0e3f6",
+                    "22a2a0be-99c3-cfb0-f64c-293294202bad",
+                    "99d75cb4-e738-c728-7a05-398a29b33620",
+                    "71f564b3-eab2-a707-5af9-0f3fe85c67ab",
+                    "e587cc1f-b1f6-5b90-fd3a-e1b4f9383887"
+                ]
+            },
+            {
+                "clean_str_data": "提图斯|70|215|1",
+                "guids": [
+                    "f6ed994b-c82d-b47c-d4ab-e7a78aa49da4",
+                    "eb97a3bb-d285-4c7c-2b83-7311d4407dfa",
+                    "ca1394b7-9c50-b7cd-fe52-58e8e9f71def",
+                    "e4e41eab-fd18-14d7-d6e4-bfcfbc3d65d2",
+                    "3e1ceb5e-f3a6-a398-4e7b-2d12bdf395f3",
+                    "15ae930b-c30e-0e3b-92e6-1f43198b3002",
+                    "1848482d-8592-df23-23f6-21af4993cc40",
+                    "b6cd3c8b-d0ff-b7fe-8c70-aa32d51cdd87",
+                    "0c7cc503-3c18-fec7-746e-08bcd771fc7b",
+                    "1c41ce5c-d60d-8b0e-e962-4813750c96df",
+                    "f4d63351-3ac1-7cce-bb9d-4086b5ea8f5b",
+                    "6d4620d5-a3c7-820f-c75d-b3c7bd2a8027",
+                    "e44a9764-40f8-603f-7408-842c03b6f853",
+                    "b3c1040d-70a2-08a5-d823-b833f09d7482",
+                    "41c332b4-9056-2aa0-2ffa-0add90e6d467",
+                    "1a971053-5ff2-bbba-89e3-13031f3079e9",
+                    "228b837f-625f-c246-af5a-1f10b9408420"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "羽郎，这是我专门为你酿制的家乡美酒{0}": {
+        "template": "羽郎，这是我专门为你酿制的家乡美酒{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "羽郎，这是我专门为你酿制的家乡美酒。",
+                "guids": [
+                    "e2dac352-8118-9d4a-aece-d0ea6dae1c45"
+                ]
+            },
+            {
+                "clean_str_data": "羽郎，这是我专门为你酿制的家乡美酒",
+                "guids": [
+                    "2ca87cb6-cf9c-3222-3e4c-0f23f1bbdb29"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "虞妹，这是我专门为你打造的上好纸鸢{0}": {
+        "template": "虞妹，这是我专门为你打造的上好纸鸢{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "虞妹，这是我专门为你打造的上好纸鸢",
+                "guids": [
+                    "b3dc999a-e09e-6d48-90d5-4575601265b4"
+                ]
+            },
+            {
+                "clean_str_data": "虞妹，这是我专门为你打造的上好纸鸢。",
+                "guids": [
+                    "19da3072-b247-75c9-2f78-49ac3a3328b0"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}，那我便在帐外等待{1}你寻回记忆的好消息了": {
+        "template": "{0}，那我便在帐外等待{1}你寻回记忆的好消息了",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "有道理，那我便在帐外等待虞姑娘你寻回记忆的好消息了",
+                "guids": [
+                    "abc64289-8dc8-60b3-f409-7e245875c557"
+                ]
+            },
+            {
+                "clean_str_data": "好，那我便在帐外等待项兄你寻回记忆的好消息了",
+                "guids": [
+                    "f62c09df-2445-5d99-24ca-a13b3d7726b9"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}=<interval=30>我愿追随你到永恒": {
+        "template": "{0}=<interval=30>我愿追随你到永恒",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21859002=<interval=30>我愿追随你到永恒",
+                "guids": [
+                    "445d4240-ee6d-2f4e-0682-1fed316a89e0"
+                ]
+            },
+            {
+                "clean_str_data": "21861002=<interval=30>我愿追随你到永恒",
+                "guids": [
+                    "ebca3bce-81f5-3a72-be0c-320fe558987b"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}=<interval=30>席勒，我就在前方等你": {
+        "template": "{0}=<interval=30>席勒，我就在前方等你",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21861000=<interval=30>席勒，我就在前方等你",
+                "guids": [
+                    "f1e1b52c-8275-edb8-9b68-0ab67e8e6049"
+                ]
+            },
+            {
+                "clean_str_data": "21859000=<interval=30>席勒，我就在前方等你",
+                "guids": [
+                    "b2fa96f9-7285-bcd0-231d-b3f088d10659"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}{1}": {
+        "template": "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}{1}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21778012='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}走",
+                "guids": [
+                    "40bbc64f-874a-d445-ba4f-111931b4fbab"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}{1}得{2}": {
+        "template": "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}{1}得{2}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21776015='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}求之不得",
+                "guids": [
+                    "64504ce1-e5a8-98bd-2387-e3e724efe83c"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21778012='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}走",
+                "guids": [
+                    "40bbc64f-874a-d445-ba4f-111931b4fbab"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}=<interval=30>无人可以阻止我们的{#0x00FF00,22,1,宋体#}重逢": {
+        "template": "{0}=<interval=30>无人可以阻止我们的{#0x00FF00,22,1,宋体#}重逢",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21860004=<interval=30>无人可以阻止我们的{#0x00FF00,22,1,宋体#}重逢",
+                "guids": [
+                    "7896304d-3559-fd85-9d0d-0b197afd5836"
+                ]
+            },
+            {
+                "clean_str_data": "21845004=<interval=30>无人可以阻止我们的{#0x00FF00,22,1,宋体#}重逢",
+                "guids": [
+                    "d22938d3-b000-0819-1d3f-9cf99c5234d8"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "21783017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}它才是水源被污染的罪魁祸首吗": {
+        "template": "21783017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}它才是水源被污染的罪魁祸首吗",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21783017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}它才是水源被污染的罪魁祸首吗",
+                "guids": [
+                    "8bb62190-500d-1d95-8a8f-14e1ff6122e5"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21784030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你，回来了吗",
+                "guids": [
+                    "b67cd73d-4269-a07d-f766-0099e082ece6"
+                ]
+            },
+            {
+                "clean_str_data": "21783004='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你救了我",
+                "guids": [
+                    "0fab8bed-e687-244a-5193-730969dde1b9"
+                ]
+            },
+            {
+                "clean_str_data": "21781012='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这里的水源，已经完全被污染了",
+                "guids": [
+                    "4bf8c927-fff0-157f-baaa-26795bf9fccd"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "21784025='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}愿在不久后的将来，再聆汝仙乐之音": {
+        "template": "21784025='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}愿在不久后的将来，再聆汝仙乐之音",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21784025='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}愿在不久后的将来，再聆汝仙乐之音",
+                "guids": [
+                    "ca23baaa-f38c-87ce-0d96-eccedd00a6d4"
+                ]
+            },
+            {
+                "clean_str_data": "21784028='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这熟悉的感觉",
+                "guids": [
+                    "5bee6479-39d0-e567-e9e7-4dad24766a5a"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}=<interval=30>席勒，别难过……{#0x00FF00,22,1,宋体#}你是王，不应如此……{#}你要好好活下去": {
+        "template": "{0}=<interval=30>席勒，别难过……{#0x00FF00,22,1,宋体#}你是王，不应如此……{#}你要好好活下去",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21860000=<interval=30>席勒，别难过……{#0x00FF00,22,1,宋体#}你是王，不应如此……{#}你要好好活下去",
+                "guids": [
+                    "e754dc1e-a8ab-bcfa-cdf4-6f34f01bc241"
+                ]
+            },
+            {
+                "clean_str_data": "21845000=<interval=30>席勒，别难过……{#0x00FF00,22,1,宋体#}你是王，不应如此……{#}你要好好活下去",
+                "guids": [
+                    "d4dc4139-20eb-eabd-2fb4-6e168f01d443"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}的专属技能{1}就像我{2}所展示的{3}样。我们最近的工作，就是帮助{4}侍卫们{5}。你可以每日接受我的委托，获得祈福宫钱、灯缘，也可以接受{6}侍卫的委托，获得万寿灯部件图纸": {
+        "template": "{0}的专属技能{1}就像我{2}所展示的{3}样。我们最近的工作，就是帮助{4}侍卫们{5}。你可以每日接受我的委托，获得祈福宫钱、灯缘，也可以接受{6}侍卫的委托，获得万寿灯部件图纸",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "觅宝侠客的专属技能觅宝术就像我刚才所展示的那样。我们最近的工作，就是帮助觅宝侍卫们寻回失物。你可以每日接受我的委托，获得祈福宫钱、灯缘，也可以接受觅宝侍卫的委托，获得万寿灯部件图纸",
+                "guids": [
+                    "9b60b974-c534-2a11-3242-fa99b5f961c3"
+                ]
+            },
+            {
+                "clean_str_data": "将军的专属技能调兵遣将就像我所展示的这样。我们最近的工作，就是帮助警戒侍卫们在周边巡逻。你可以每日接受我的委托，获得祈福宫钱、灯缘，也可以接受警戒侍卫的委托，获得万寿灯部件图纸",
+                "guids": [
+                    "6940c287-e168-cd7b-605a-37d2b16637f7"
+                ]
+            }
+        ],
+        "placeholders": []
+    }
+}

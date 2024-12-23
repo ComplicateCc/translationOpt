@@ -1,0 +1,873 @@
+{
+    "{0}怎么了": {
+        "template": "{0}怎么了",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "怎么了",
+                "guids": [
+                    "a50bfef7-7f63-1d3d-de50-1bcdbaa4a148"
+                ]
+            },
+            {
+                "clean_str_data": "我怎么了",
+                "guids": [
+                    "40439f2f-78da-bac0-ce63-34124b047c70"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "雾林村{0}民{1}": {
+        "template": "雾林村{0}民{1}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "雾林村民兵",
+                "guids": [
+                    "04ed0cc9-5a24-5a18-5788-ce0ab32d8baf",
+                    "6ca0c72e-089b-450f-d24a-c670b3ace1ef",
+                    "28e0e968-45ab-8b42-3afd-5cdfdf7daf29",
+                    "980f460c-3cff-5d23-ba9d-c27da9f36da5",
+                    "363e3749-cec5-2da4-4395-c5ca3d46fed7",
+                    "2157248c-9432-51e1-bedb-927e2733fc8c",
+                    "7e5bafa0-4db0-d28f-9d60-b0a11a8f2155",
+                    "9197fa09-c9b3-76bc-1834-0ca14f52e36b",
+                    "b5fcda5a-c1bf-aa60-44bd-7bbf7cd6b642",
+                    "c6c5fe86-bc76-9bee-6e65-42970e549f35",
+                    "4d6cf79b-f7e7-722a-8f23-8eb0589ddc97",
+                    "f12425b7-5439-6a9c-b4b9-6e4500cc7ccf",
+                    "c62e1ee5-21f2-2508-f42f-0a5a00fd255c",
+                    "9593dae1-f96e-91a0-c4c4-9d1f66884b31",
+                    "20d91b3c-578d-4bd9-86a0-f028df6b921a",
+                    "4762afa2-42fd-0979-dfd1-0ab2793ed1aa",
+                    "907fbf27-1c64-6e94-1d15-9b68942e75e8"
+                ]
+            },
+            {
+                "clean_str_data": "雾林村村民",
+                "guids": [
+                    "0b22a35b-8202-81e5-df33-aed637c17d1c",
+                    "f9581edb-0cb0-db8d-5dd6-d30c711cb4e2",
+                    "bc408c37-a02d-c5ce-845f-5fa4916e02f3",
+                    "62eb26e2-0aa2-420a-27ec-ac750b6c1da0"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "赫丽女王{0}": {
+        "template": "赫丽女王{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "赫丽女王您说",
+                "guids": [
+                    "d700b119-6be2-308d-bce5-51b50ebc42fb"
+                ]
+            },
+            {
+                "clean_str_data": "赫丽女王",
+                "guids": [
+                    "6ebd0b9a-be44-c05a-e28f-88feb4a98dea",
+                    "521c020d-104c-1e4d-9229-f3a93dcfdfc6",
+                    "3112a350-8240-7612-f7ba-5c815058c1b8",
+                    "606faa98-8f87-a09d-efb0-4e11c67477fe",
+                    "1ca67e68-3146-00bd-8bde-d27ae1fb38b4",
+                    "5b46809c-6eb7-521b-0721-b385e7eaeb7f",
+                    "94137113-099f-bcef-9dd1-7c51b49ae8d6"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "吞噬{0}": {
+        "template": "吞噬{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "吞噬他",
+                "guids": [
+                    "08a1f1c4-29f7-90ae-a2cb-8885766836ec",
+                    "72702094-02bd-32f3-1ea1-636e416a905b"
+                ]
+            },
+            {
+                "clean_str_data": "吞噬",
+                "guids": [
+                    "a55aa809-7227-4b07-be0d-2292c1acb94e",
+                    "0e0b9f1c-14bb-a2c4-1dd6-3fa31e196443"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "复苏的亡{0}": {
+        "template": "复苏的亡{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "复苏的亡魂",
+                "guids": [
+                    "223fc658-e2b0-f597-1561-0a57c31f9d7a",
+                    "a41db6f1-acce-863c-ab8d-8d05039d552b"
+                ]
+            },
+            {
+                "clean_str_data": "复苏的亡者",
+                "guids": [
+                    "3b191728-8ae6-c753-d686-d441b3f04696",
+                    "3ee47ea7-3663-2350-296e-1398e0819675"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "国王{0}尼禄": {
+        "template": "国王{0}尼禄",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "国王·尼禄",
+                "guids": [
+                    "c509f76e-7a14-a872-6411-e76cd798fe40",
+                    "60ce539b-3cc5-e5d4-bca7-f64b13c93f33",
+                    "dd27b8e0-2f35-c708-6b0d-95e9e1e754cd",
+                    "f900bf62-b83a-1468-7b59-0cfb459cce61",
+                    "0be2e815-e59a-1824-7745-91cb38fdbd74",
+                    "c6b10fee-83dc-71a6-40ec-4b3bbfc2bfc4",
+                    "85c70e55-efe6-d14f-f56f-8a1e64fab9f1",
+                    "16c28762-cc69-739c-bdcd-52b60551ebc1"
+                ]
+            },
+            {
+                "clean_str_data": "国王尼禄",
+                "guids": [
+                    "130d3b47-78b2-422b-1147-6ad48aa172c2"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}发生了什么": {
+        "template": "{0}发生了什么",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "发生了什么",
+                "guids": [
+                    "24a92363-f48b-1de7-0975-c9800a02852e"
+                ]
+            },
+            {
+                "clean_str_data": "到底发生了什么",
+                "guids": [
+                    "b14340f3-12d8-8266-10d1-0409f993b555"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "灾厄之蚀·索托{0}": {
+        "template": "灾厄之蚀·索托{0}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "灾厄之蚀·索托斯",
+                "guids": [
+                    "fc420652-476e-5f66-d1b5-bda4cf66cadd",
+                    "cc04dc98-ff4e-0b96-1369-c9c14e975987",
+                    "49e29d03-22d7-4308-2505-9efe70d10762",
+                    "1e9e9957-7746-d8b5-f20c-ea21112b9b94",
+                    "3aace6ee-0b2a-1f92-96db-5cc6b6a1614b",
+                    "84a6e3a7-1754-5f1e-9cf1-ca39b2d781bc",
+                    "6c855cbd-24ef-863f-a7ae-1b9ba9c63af3",
+                    "b3254c40-6303-ed3c-3178-cce17b09d8c1",
+                    "0c45508d-fce4-4414-30cb-92ee0fa74403"
+                ]
+            },
+            {
+                "clean_str_data": "灾厄之蚀·索托",
+                "guids": [
+                    "c34533f3-7125-b2a9-1394-df8ca5f018d4",
+                    "62ebf0f4-160a-7903-fce9-243f9614db58"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}这到底是怎么{1}回事": {
+        "template": "{0}这到底是怎么{1}回事",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "这到底是怎么回事",
+                "guids": [
+                    "caf71a9e-7edd-fd0f-e338-5bcdf064c87c"
+                ]
+            },
+            {
+                "clean_str_data": "这，这到底是怎么一回事",
+                "guids": [
+                    "42ca7796-2715-626a-9fa3-2fe94712a138"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "我竟然亲眼见证了一位{0}主神的诞生": {
+        "template": "我竟然亲眼见证了一位{0}主神的诞生",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "我竟然亲眼见证了一位圆满主神的诞生",
+                "guids": [
+                    "9626ad41-97e5-78a0-bd86-b3f02d2324f9",
+                    "a84ead14-13b6-844d-39af-014ea8ce8e8c",
+                    "3408cf58-7709-31c9-4384-a0c7d5a5c849"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位永恒主神的诞生",
+                "guids": [
+                    "2573197f-7a8b-c593-95fa-6b2fd936ae80",
+                    "dd0313c3-c7d3-9541-d7df-c0591d0d321e",
+                    "19a403fb-e5bb-682f-7c75-5505c4888f95"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位高阶主神的诞生",
+                "guids": [
+                    "83fd7d4c-496c-48f8-62ba-d89eda05ddc8",
+                    "93977e38-6f02-5698-122b-768da0e8ffe3",
+                    "ddda1c35-57a2-ff53-db4e-86e0174e421d"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位巅峰主神的诞生",
+                "guids": [
+                    "ecd4dc28-8d04-b62b-6d75-ac5ea00e72fa",
+                    "baa9c6b3-f6e1-78b6-2a34-0c14fb269065",
+                    "15b2b46f-1b6a-fd83-8961-06ad8cef49e9"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位至尊主神的诞生",
+                "guids": [
+                    "e88bd4c2-8f76-2647-66fd-54035df03bd0",
+                    "88848790-e2e5-3491-2fa1-0e5f3cfc3067",
+                    "47bcc0f9-5548-75c4-be77-2fe72d79a53e"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位极限主神的诞生",
+                "guids": [
+                    "80b9d07b-82db-f6ba-614d-a54545cacbe5",
+                    "db475380-3d1b-958d-608d-d6ce491b165d",
+                    "7ad74e91-8315-26b6-b197-3ff730f72632"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位不朽主神的诞生",
+                "guids": [
+                    "5b49e346-f5ab-b644-43af-9ea6a6c6a4c3",
+                    "9a5ec9a3-fca6-5b87-5ba7-4312a08fd2bc",
+                    "1ffb5d7d-a37d-d655-b6d2-1a72ce0c0fa0"
+                ]
+            },
+            {
+                "clean_str_data": "我竟然亲眼见证了一位超凡主神的诞生",
+                "guids": [
+                    "cf3adc99-1841-6405-149f-69719776cd3c",
+                    "0c8ce983-1405-0f99-61f5-af71019b4b71",
+                    "e278fac7-b110-78a4-4886-d30a9e6f9604"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}，那我便在帐外等待{1}你寻回记忆的好消息了": {
+        "template": "{0}，那我便在帐外等待{1}你寻回记忆的好消息了",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "有道理，那我便在帐外等待虞姑娘你寻回记忆的好消息了",
+                "guids": [
+                    "abc64289-8dc8-60b3-f409-7e245875c557"
+                ]
+            },
+            {
+                "clean_str_data": "好，那我便在帐外等待项兄你寻回记忆的好消息了",
+                "guids": [
+                    "f62c09df-2445-5d99-24ca-a13b3d7726b9"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}=<interval=30>我愿追随你到永恒": {
+        "template": "{0}=<interval=30>我愿追随你到永恒",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21859002=<interval=30>我愿追随你到永恒",
+                "guids": [
+                    "445d4240-ee6d-2f4e-0682-1fed316a89e0"
+                ]
+            },
+            {
+                "clean_str_data": "21861002=<interval=30>我愿追随你到永恒",
+                "guids": [
+                    "ebca3bce-81f5-3a72-be0c-320fe558987b"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}=<interval=30>席勒，我就在前方等你": {
+        "template": "{0}=<interval=30>席勒，我就在前方等你",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21859000=<interval=30>席勒，我就在前方等你",
+                "guids": [
+                    "b2fa96f9-7285-bcd0-231d-b3f088d10659"
+                ]
+            },
+            {
+                "clean_str_data": "21861000=<interval=30>席勒，我就在前方等你",
+                "guids": [
+                    "f1e1b52c-8275-edb8-9b68-0ab67e8e6049"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}{1}": {
+        "template": "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}{1}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21778012='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}走",
+                "guids": [
+                    "40bbc64f-874a-d445-ba4f-111931b4fbab"
+                ]
+            },
+            {
+                "clean_str_data": "21776015='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}求之不得",
+                "guids": [
+                    "64504ce1-e5a8-98bd-2387-e3e724efe83c"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21779030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我要撑下去",
+                "guids": [
+                    "4b18fd36-e047-783b-69f6-cf3e374a2986"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21783004='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你救了我",
+                "guids": [
+                    "0fab8bed-e687-244a-5193-730969dde1b9"
+                ]
+            },
+            {
+                "clean_str_data": "21779023='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}朋友…谢谢你",
+                "guids": [
+                    "9a09c927-efce-8fb9-9965-e6b3900621b8"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21779030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我要撑下去",
+                "guids": [
+                    "4b18fd36-e047-783b-69f6-cf3e374a2986"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21784028='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这熟悉的感觉",
+                "guids": [
+                    "5bee6479-39d0-e567-e9e7-4dad24766a5a"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21783004='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你救了我",
+                "guids": [
+                    "0fab8bed-e687-244a-5193-730969dde1b9"
+                ]
+            },
+            {
+                "clean_str_data": "21779023='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}朋友…谢谢你",
+                "guids": [
+                    "9a09c927-efce-8fb9-9965-e6b3900621b8"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21784030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你，回来了吗",
+                "guids": [
+                    "b67cd73d-4269-a07d-f766-0099e082ece6"
+                ]
+            },
+            {
+                "clean_str_data": "21779023='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}朋友…谢谢你",
+                "guids": [
+                    "9a09c927-efce-8fb9-9965-e6b3900621b8"
+                ]
+            },
+            {
+                "clean_str_data": "21776015='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}求之不得",
+                "guids": [
+                    "64504ce1-e5a8-98bd-2387-e3e724efe83c"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21779030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我要撑下去",
+                "guids": [
+                    "4b18fd36-e047-783b-69f6-cf3e374a2986"
+                ]
+            },
+            {
+                "clean_str_data": "21779033='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我必须要……撑下去",
+                "guids": [
+                    "f0765e1a-0bd0-b18b-2695-d0eb1701238c"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21784030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你，回来了吗",
+                "guids": [
+                    "b67cd73d-4269-a07d-f766-0099e082ece6"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21783004='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你救了我",
+                "guids": [
+                    "0fab8bed-e687-244a-5193-730969dde1b9"
+                ]
+            },
+            {
+                "clean_str_data": "21779023='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}朋友…谢谢你",
+                "guids": [
+                    "9a09c927-efce-8fb9-9965-e6b3900621b8"
+                ]
+            },
+            {
+                "clean_str_data": "21776015='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}求之不得",
+                "guids": [
+                    "64504ce1-e5a8-98bd-2387-e3e724efe83c"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21779005='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}大家都退开！远离水井",
+                "guids": [
+                    "bc7b4775-ae29-b343-f221-311068dee034"
+                ]
+            },
+            {
+                "clean_str_data": "21779030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我要撑下去",
+                "guids": [
+                    "4b18fd36-e047-783b-69f6-cf3e374a2986"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21783004='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你救了我",
+                "guids": [
+                    "0fab8bed-e687-244a-5193-730969dde1b9"
+                ]
+            },
+            {
+                "clean_str_data": "21779023='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}朋友…谢谢你",
+                "guids": [
+                    "9a09c927-efce-8fb9-9965-e6b3900621b8"
+                ]
+            },
+            {
+                "clean_str_data": "21776015='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}求之不得",
+                "guids": [
+                    "64504ce1-e5a8-98bd-2387-e3e724efe83c"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21784028='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这熟悉的感觉",
+                "guids": [
+                    "5bee6479-39d0-e567-e9e7-4dad24766a5a"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21783004='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你救了我",
+                "guids": [
+                    "0fab8bed-e687-244a-5193-730969dde1b9"
+                ]
+            },
+            {
+                "clean_str_data": "21782011='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}可恶……！使不出力气",
+                "guids": [
+                    "1414482b-4d7a-20f7-6260-e5d040a9a7e3"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21779030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我要撑下去",
+                "guids": [
+                    "4b18fd36-e047-783b-69f6-cf3e374a2986"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21783004='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你救了我",
+                "guids": [
+                    "0fab8bed-e687-244a-5193-730969dde1b9"
+                ]
+            },
+            {
+                "clean_str_data": "21783007='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}你也救过我，我们扯平了",
+                "guids": [
+                    "3d078273-dbc6-783a-c206-8adf61754a35"
+                ]
+            },
+            {
+                "clean_str_data": "21774011='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}无事，休息片刻便行",
+                "guids": [
+                    "5a288666-e92e-986d-4716-0c7a26e2bb8c"
+                ]
+            },
+            {
+                "clean_str_data": "21774008='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}昭君姑娘，可是身子不适",
+                "guids": [
+                    "1460457a-8730-8224-1e79-5fbcd3c55dc5"
+                ]
+            },
+            {
+                "clean_str_data": "21781009='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这是",
+                "guids": [
+                    "555ac4c5-006a-a54f-2013-b1c2f4ea0a62"
+                ]
+            },
+            {
+                "clean_str_data": "21779030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我要撑下去",
+                "guids": [
+                    "4b18fd36-e047-783b-69f6-cf3e374a2986"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21784028='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这熟悉的感觉",
+                "guids": [
+                    "5bee6479-39d0-e567-e9e7-4dad24766a5a"
+                ]
+            },
+            {
+                "clean_str_data": "21783004='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你救了我",
+                "guids": [
+                    "0fab8bed-e687-244a-5193-730969dde1b9"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}=<interval=30>无人可以阻止我们的{#0x00FF00,22,1,宋体#}重逢": {
+        "template": "{0}=<interval=30>无人可以阻止我们的{#0x00FF00,22,1,宋体#}重逢",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21845004=<interval=30>无人可以阻止我们的{#0x00FF00,22,1,宋体#}重逢",
+                "guids": [
+                    "d22938d3-b000-0819-1d3f-9cf99c5234d8"
+                ]
+            },
+            {
+                "clean_str_data": "21860004=<interval=30>无人可以阻止我们的{#0x00FF00,22,1,宋体#}重逢",
+                "guids": [
+                    "7896304d-3559-fd85-9d0d-0b197afd5836"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "21779007='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}请大家回屋内，无事切勿出门": {
+        "template": "21779007='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}请大家回屋内，无事切勿出门",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21779007='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}请大家回屋内，无事切勿出门",
+                "guids": [
+                    "a355199c-c1c6-e9d9-8617-4bf00b1b7d2f"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21779030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我要撑下去",
+                "guids": [
+                    "4b18fd36-e047-783b-69f6-cf3e374a2986"
+                ]
+            },
+            {
+                "clean_str_data": "21779005='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}大家都退开！远离水井",
+                "guids": [
+                    "bc7b4775-ae29-b343-f221-311068dee034"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这{1}的{2}": {
+        "template": "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这{1}的{2}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21781012='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这里的水源，已经完全被污染了",
+                "guids": [
+                    "4bf8c927-fff0-157f-baaa-26795bf9fccd"
+                ]
+            },
+            {
+                "clean_str_data": "21784028='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这熟悉的感觉",
+                "guids": [
+                    "5bee6479-39d0-e567-e9e7-4dad24766a5a"
+                ]
+            },
+            {
+                "clean_str_data": "21782013='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}休得伤她",
+                "guids": [
+                    "029afc75-7b57-db06-731b-cb022a155565"
+                ]
+            },
+            {
+                "clean_str_data": "21784030='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}是你，回来了吗",
+                "guids": [
+                    "b67cd73d-4269-a07d-f766-0099e082ece6"
+                ]
+            },
+            {
+                "clean_str_data": "21783017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}它才是水源被污染的罪魁祸首吗",
+                "guids": [
+                    "8bb62190-500d-1d95-8a8f-14e1ff6122e5"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}{1}你{2}": {
+        "template": "{0}='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}{1}你{2}",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21779021='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}可你的身体.....哎，走吧",
+                "guids": [
+                    "fb3c79b5-a6b1-32d2-0e1d-17d52d6a1602"
+                ]
+            },
+            {
+                "clean_str_data": "21779023='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}朋友…谢谢你",
+                "guids": [
+                    "9a09c927-efce-8fb9-9965-e6b3900621b8"
+                ]
+            },
+            {
+                "clean_str_data": "21774017='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}我们过去吧",
+                "guids": [
+                    "45190c74-cb9e-29c5-a166-01d059736847"
+                ]
+            },
+            {
+                "clean_str_data": "21776015='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}求之不得",
+                "guids": [
+                    "64504ce1-e5a8-98bd-2387-e3e724efe83c"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "21784025='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}愿在不久后的将来，再聆汝仙乐之音": {
+        "template": "21784025='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}愿在不久后的将来，再聆汝仙乐之音",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21784025='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}愿在不久后的将来，再聆汝仙乐之音",
+                "guids": [
+                    "ca23baaa-f38c-87ce-0d96-eccedd00a6d4"
+                ]
+            },
+            {
+                "clean_str_data": "21784028='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}这熟悉的感觉",
+                "guids": [
+                    "5bee6479-39d0-e567-e9e7-4dad24766a5a"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "21774008='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}昭君姑娘，可是身子不适": {
+        "template": "21774008='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}昭君姑娘，可是身子不适",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21774008='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}昭君姑娘，可是身子不适",
+                "guids": [
+                    "1460457a-8730-8224-1e79-5fbcd3c55dc5"
+                ]
+            },
+            {
+                "clean_str_data": "21784008='<interval=66>{#0xbfb4a1,16,0,方正准圆简体#}昭君最后的愿望，是希望我带你们离开这里",
+                "guids": [
+                    "8dab9336-51de-37b7-802f-3578610e36e5"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}=<interval=30>席勒，别难过……{#0x00FF00,22,1,宋体#}你是王，不应如此……{#}你要好好活下去": {
+        "template": "{0}=<interval=30>席勒，别难过……{#0x00FF00,22,1,宋体#}你是王，不应如此……{#}你要好好活下去",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "21860000=<interval=30>席勒，别难过……{#0x00FF00,22,1,宋体#}你是王，不应如此……{#}你要好好活下去",
+                "guids": [
+                    "e754dc1e-a8ab-bcfa-cdf4-6f34f01bc241"
+                ]
+            },
+            {
+                "clean_str_data": "21845000=<interval=30>席勒，别难过……{#0x00FF00,22,1,宋体#}你是王，不应如此……{#}你要好好活下去",
+                "guids": [
+                    "d4dc4139-20eb-eabd-2fb4-6e168f01d443"
+                ]
+            }
+        ],
+        "placeholders": []
+    },
+    "{0}的专属技能{1}就像我{2}所展示的{3}样。我们最近的工作，就是帮助{4}侍卫们{5}。你可以每日接受我的委托，获得祈福宫钱、灯缘，也可以接受{6}侍卫的委托，获得万寿灯部件图纸": {
+        "template": "{0}的专属技能{1}就像我{2}所展示的{3}样。我们最近的工作，就是帮助{4}侍卫们{5}。你可以每日接受我的委托，获得祈福宫钱、灯缘，也可以接受{6}侍卫的委托，获得万寿灯部件图纸",
+        "clean_str_datas": [
+            {
+                "clean_str_data": "觅宝侠客的专属技能觅宝术就像我刚才所展示的那样。我们最近的工作，就是帮助觅宝侍卫们寻回失物。你可以每日接受我的委托，获得祈福宫钱、灯缘，也可以接受觅宝侍卫的委托，获得万寿灯部件图纸",
+                "guids": [
+                    "9b60b974-c534-2a11-3242-fa99b5f961c3"
+                ]
+            },
+            {
+                "clean_str_data": "将军的专属技能调兵遣将就像我所展示的这样。我们最近的工作，就是帮助警戒侍卫们在周边巡逻。你可以每日接受我的委托，获得祈福宫钱、灯缘，也可以接受警戒侍卫的委托，获得万寿灯部件图纸",
+                "guids": [
+                    "6940c287-e168-cd7b-605a-37d2b16637f7"
+                ]
+            }
+        ],
+        "placeholders": []
+    }
+}
