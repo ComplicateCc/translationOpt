@@ -521,24 +521,61 @@ def hanlde_translationTemplateDatas_new(all_data):
     # 用Json的格式保存结果
     with open("result_1219_222.txt", "w", encoding="utf-8") as f:
         json.dump(template_datas, f, cls=CustomEncoder, ensure_ascii=False, indent=4)
-                      
 
+# 找到clean_str_data相同  但是原字符串不同的数据
+def find_clean_str_data_same_but_origin_str_data_different(all_data):
+    translation_data = init_translation_datas(all_data)
+    # 遍历translation_data 找到 guids数量大于1的数据 查询clean_str_data相同 但是origin_str_data不同的数据
+    for key, value in translation_data.items():
+        if len(value["guids"]) > 1:
+            for file_name, data_structures in all_data.items():
+                for data in data_structures:
+                    if data.clean_string_data == key:
+                        if data.origin_string_data not in result_data:
+                            result_data[data.origin_string_data] = []
+                        result_data[data.origin_string_data].append(data.clean_string_data)                
+    # 将结果存储到txt文件中
+    with open("result_1219_333.txt", "w", encoding="utf-8") as f:
+        for key in result_data.keys():
+            f.write(f"原始数据: {key}\n")
+            f.write(f"清洗数据: {result_data[key]}\n")
+            f.write("\n")                    
+    
+    
 # def handle_data(all_data):
     #遍历all_data 以clean_string_data为目标字符串
 
 # Define the directory path and output CSV path
 directory_path = r'G:\Project\TranslationOptimization\Files'
+test_directory_path = r'G:\Project\TranslationOptimization\Test'
 output_csv_path = r'G:\Project\TranslationOptimization\Files\all_ini_files.csv'
 output_excel_path = r'G:\Project\TranslationOptimization\Files\all_ini_files.xlsx'
 
 length_threshold = 5
 
 def main():
-    all_data = process_directory(directory_path)
-    save_to_excel(all_data, output_excel_path)
-    save_to_sql(all_data)
+    all_data = process_directory(test_directory_path)
+    
+    str_line_data = []
+    # 打印all_data
+    for key, value in all_data.items():
+        # print(f"file_name: {key}")
+        for data in value:
+            #判定 clean_str_data 是否在str_line_data中
+            if data.clean_string_data not in str_line_data:
+                str_line_data.append(data.clean_string_data)
+    # str_line_data保存成新文件
+    with open("result_1219_444.txt", "w", encoding="utf-8") as f:
+        for data in str_line_data:
+            f.write(f"{data}\n")
+    
+    
+    # save_to_excel(all_data, output_excel_path)
+    # save_to_sql(all_data)
     # hanlde_translationTemplateDatas(all_data)
-    hanlde_translationTemplateDatas_new(all_data)
+    # hanlde_translationTemplateDatas_new(all_data)
+    
+    # find_clean_str_data_same_but_origin_str_data_different(all_data)
     # get_different_with_placeholder('1111012,3,106,0,300000,1350,0,10,100,"1048185,1","1092174,129,1","增加伤害法宝[*-13,112*]3[*-4,-1*][~SQCZ_BBBSIcon~]",65,3783,0,12,1,"1037231|1037232|1037233|1111010|1111110|1111210|1110010|1110110|1110210||1048400|1111011|1111111|1111211|1092174|1092015",3,"3276', 
     #                                '1111012,3,107,0,360000,1450,0,10,100,"1048185,1","1092174,189,1","增加伤害法宝[*-13,112*]3[*-4,-1*][~SQCZ_BBBSIcon~]",65,3783,0,12,1,"1037231|1037232|1037233|1111010|1111110|1111210|1110010|1110110|1110210||1048400|1111011|1111111|1111211|1092174|1092015",3,"3276')
     return
