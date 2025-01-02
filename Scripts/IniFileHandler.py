@@ -67,12 +67,13 @@ def handle_single_line(line, file_name=""):
     
     if contains_chinese(line):
         #删除所有格式为 [=x=]的字符串 x为任意数字
-        line_new = re.sub(r'\[=\d+=\]', '', line)
+        # line_new = re.sub(r'\[=\d+=\]', '', line)
         #删除Link=x x为任意数字
-        line_new = re.sub(r'Link=\d+', '', line_new)
+        # line_new = re.sub(r'Link=\d+', '', line_new)
         
         # isUnknownFormat = False
         
+        line_new = line
         #尝试以等号分割句子
         elements = line_new.split('=')
         if len(elements) == 2 :
@@ -88,6 +89,32 @@ def handle_single_line(line, file_name=""):
             data_structures = handle_space_split(line, line_new, file_name)
         return data_structures
     return None
+
+def handle_single_line_new(line, file_name=""):
+    # 创建一组 data_structure 对象
+    data_structures = []
+    
+    data_structures.append(get_data_structure(line, line, file_name))
+    
+    return data_structures
+
+def handle_single_line_simple(line, file_name=""):
+    # 创建一组 data_structure 对象
+    data_structures = []
+    
+    if contains_chinese(line):
+        line_new = line
+        #尝试以等号分割句子
+        elements = line_new.split('=')
+        if len(elements) == 2 :
+            if not contains_chinese(elements[0]) and contains_chinese(elements[1]):
+                data_structures.append(get_data_structure(line, elements[1], file_name))
+            else:
+                data_structures.append(get_data_structure(line, line_new, file_name))
+        else:
+            data_structures.append(get_data_structure(line, line_new, file_name))
+        return data_structures
+    return None    
 
 # def process_ini_file(file_path):
 #     data_structures = []
@@ -113,7 +140,7 @@ def process_ini_single_line(file_path):
             line = line.strip()
             if check_if_line_is_invalid(line):
                 continue
-            result = handle_single_line(line, file_name)
+            result = handle_single_line_simple(line, file_name)
             if result:
                 #遍历result集合 添加到data_structures
                 for ds in result:
@@ -127,7 +154,7 @@ def test_process_all_single_line(directory_path):
                 file_path = os.path.join(root, file)
                 process_ini_single_line(file_path)
 
-
+# 整理ini格式文件
 def process_directory(directory_path):
     all_data = {}
     for root, _, files in os.walk(directory_path):
@@ -204,10 +231,11 @@ def replace_numbers_with_placeholder(text, num_dict):
     def replacer(match):
         num = match.group(0)
         return num_dict[num]
+        # return str('{'+num_dict[num]+'}')
     
     return re.sub(r'\d+', replacer, text)
 
-def get_different_with_placeholder(str1, str2, ratio=0.8, ignore_similar=False):
+def get_different_with_placeholder(str1, str2, ratio=0.75, ignore_similar=False):
     # 提取字符串1和字符串2中的所有数字
     nums1 = extract_numbers(str1)
     nums2 = extract_numbers(str2)
@@ -226,7 +254,8 @@ def get_different_with_placeholder(str1, str2, ratio=0.8, ignore_similar=False):
     
     if not ignore_similar:
         s = SequenceMatcher(None, str1_placeholder, str2_placeholder)
-        if s.ratio() < ratio:
+        s_ratio = s.ratio()
+        if s_ratio < ratio:
             return False, str1, [], []
 
     parts = []
@@ -315,8 +344,7 @@ def create_data_structure(conn, data_structures):
     cur.executemany(sql_insert, filtered_data_structures)
     conn.commit()
 
-def save_to_sql(all_data):
-    database = r"original_data.db"
+def save_to_sql(all_data, database="original_data.db"):
 
     # create a database connection
     conn = sqlite3.connect(database)
@@ -509,17 +537,34 @@ def hanlde_translationTemplateDatas_new(all_data):
 
     # 处理占位符数据
     for key in translation_data_pair_list.keys():
-        placeholders = {}
+        placeholders = []
+        
+        # 获取translation_data_pair_list[key]中最长的两个字符串
+        # str1, str2
+        # if len(translation_data_pair_list[key]) == 2:
+        #     str1 = translation_data_pair_list[key][0].clean_str_data
+        #     str2 = translation_data_pair_list[key][1].clean_str_data
+        # else:
+        #     str1 = max(translation_data_pair_list[key], key=lambda x: len(x.clean_str_data)).clean_str_data
+        #     str2 = min(translation_data_pair_list[key], key=lambda x: len(x.clean_str_data)).clean_str_data
+        
         # 用get_different_with_placeholder 比较translation_data_pair_list[key]前两个元素
         is_similar, result, placeholder1, placeholder2 = get_different_with_placeholder(translation_data_pair_list[key][0].clean_str_data, translation_data_pair_list[key][1].clean_str_data)
         if result not in template_datas:
             clean_str_datas = translation_data_pair_list[key]
+            # 把placeholder1 placeholder2 添加到placeholders中
+            for placeholder in placeholder1:
+                if contains_chinese(placeholder):
+                    placeholders.append(placeholder)
+            for placeholder in placeholder2:
+                if contains_chinese(placeholder):
+                    placeholders.append(placeholder)
             
             template_data = TranslationTemplateData(result, clean_str_datas, placeholders)
             template_datas[result] = template_data
 
     # 用Json的格式保存结果
-    with open("result_1219_222.txt", "w", encoding="utf-8") as f:
+    with open("result_1224.txt", "w", encoding="utf-8") as f:
         json.dump(template_datas, f, cls=CustomEncoder, ensure_ascii=False, indent=4)
 
 # 找到clean_str_data相同  但是原字符串不同的数据
@@ -551,33 +596,75 @@ test_directory_path = r'G:\Project\TranslationOptimization\Test'
 output_csv_path = r'G:\Project\TranslationOptimization\Files\all_ini_files.csv'
 output_excel_path = r'G:\Project\TranslationOptimization\Files\all_ini_files.xlsx'
 
+test_ini_file_path = r'G:\Project\TranslationOptimization\Files\LUA\Test'
+test_output_excel_path = r'G:\Project\TranslationOptimization\Files\LUA\Test\all_ini_files.xlsx'
+
 length_threshold = 5
 
 def main():
-    all_data = process_directory(test_directory_path)
+    # all_data = process_directory(directory_path)
+    # save_to_excel(all_data, output_excel_path)
+    # save_to_sql(all_data)
+    # # # hanlde_translationTemplateDatas(all_data)
+    # hanlde_translationTemplateDatas_new(all_data)
     
-    str_line_data = []
-    # 打印all_data
-    for key, value in all_data.items():
-        # print(f"file_name: {key}")
-        for data in value:
-            #判定 clean_str_data 是否在str_line_data中
-            if data.clean_string_data not in str_line_data:
-                str_line_data.append(data.clean_string_data)
-    # str_line_data保存成新文件
-    with open("result_1219_444.txt", "w", encoding="utf-8") as f:
-        for data in str_line_data:
-            f.write(f"{data}\n")
+    all_data = process_directory(test_ini_file_path)
+    save_to_excel(all_data, test_output_excel_path)
+    save_to_sql(all_data, r'G:\Project\TranslationOptimization\Files\LUA\Test\original_data.db')
+    # hanlde_translationTemplateDatas(all_data)
+    hanlde_translationTemplateDatas_new(all_data)
+    
+    # all_data = {}
+    # file = "NewGemStoneTip.ini"
+    # all_data[file] = process_ini_single_line(r'G:\Project\TranslationOptimization\Files\客户端独有INI\NewGemStoneTip.ini')
+    # save_to_excel(all_data, output_excel_path)
+    # # save_to_sql(all_data)
+    # hanlde_translationTemplateDatas_new(all_data)
+    
+    # test_file_path = r'G:\Project\TranslationOptimization\Test\AAA'
+    # file_path = r'G:\Project\TranslationOptimization\Test\Test_clean.txt'
+    # clean_str_datas = set()
+    # all_data = process_directory(test_file_path)
+    # # 遍历all_data 将所有clean_string_data存储到clean_str_datas
+    # for file_name, data_structures in all_data.items():
+    #     for data in data_structures:
+    #         clean_str_datas.add(data.clean_string_data)
+    # # 将clean_str_datas去重
+    # clean_str_datas = list(clean_str_datas)
+    # # 将clean_str_datas存储到txt文件中
+    # with open(file_path, "w", encoding="utf-8") as f:
+    #     for data in clean_str_datas:
+    #         f.write(f"{data}\n")
+    
+    # save_to_excel(all_data, output_excel_path)
+    # save_to_sql(all_data)
+    # hanlde_translationTemplateDatas_new(all_data)
+    
+    # str_line_data = []
+    # # 打印all_data
+    # for key, value in all_data.items():
+    #     # print(f"file_name: {key}")
+    #     for data in value:
+    #         #判定 clean_str_data 是否在str_line_data中
+    #         if data.clean_string_data not in str_line_data:
+    #             str_line_data.append(data.clean_string_data)
+    # # str_line_data保存成新文件
+    # with open("result_1223.txt", "w", encoding="utf-8") as f:
+    #     for data in str_line_data:
+    #         f.write(f"{data}\n")
     
     
     # save_to_excel(all_data, output_excel_path)
     # save_to_sql(all_data)
-    # hanlde_translationTemplateDatas(all_data)
+    # # hanlde_translationTemplateDatas(all_data)
     # hanlde_translationTemplateDatas_new(all_data)
     
     # find_clean_str_data_same_but_origin_str_data_different(all_data)
-    # get_different_with_placeholder('1111012,3,106,0,300000,1350,0,10,100,"1048185,1","1092174,129,1","增加伤害法宝[*-13,112*]3[*-4,-1*][~SQCZ_BBBSIcon~]",65,3783,0,12,1,"1037231|1037232|1037233|1111010|1111110|1111210|1110010|1110110|1110210||1048400|1111011|1111111|1111211|1092174|1092015",3,"3276', 
-    #                                '1111012,3,107,0,360000,1450,0,10,100,"1048185,1","1092174,189,1","增加伤害法宝[*-13,112*]3[*-4,-1*][~SQCZ_BBBSIcon~]",65,3783,0,12,1,"1037231|1037232|1037233|1111010|1111110|1111210|1110010|1110110|1110210||1048400|1111011|1111111|1111211|1092174|1092015",3,"3276')
+    # is_similar, result,ph1,ph2 = get_different_with_placeholder(r'增加伤害法宝155%', 
+    #                                 r'增加伤害法宝15%')
+    # print(result)
+    # print(ph1)
+    # print(ph2)
     return
     translation_data = init_translation_datas(all_data)
     translation_data_by_numbers = init_translation_datas_by_numbers(translation_data)
